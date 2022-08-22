@@ -1,0 +1,88 @@
+
+
+    let DestinationData = [
+        {
+          id: "1",
+          img: require("../assets/images/popular/slide-1.webp"),
+          title: "Family Suit",
+          bed: "2 Beds",
+          feet: "150 Sq.feet",
+          desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride.....",
+          price: "$220.0/Night",
+        },
+        {
+          id: "2",
+          img: require("../assets/images/popular/slide-2.webp"),
+          title: "Queen’s Room",
+          bed: "2 Beds",
+          feet: "150 Sq.feet",
+          desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride.....",
+          price: "$220.0/Night",
+        },
+        {
+          id: "3",
+          img: require("../assets/images/popular/slide-3.webp"),
+          title: "Family Suit",
+          bed: "2 Beds",
+          feet: "150 Sq.feet",
+          desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride.....",
+          price: "$220.0/Night",
+        },
+        {
+          id: "4",
+          img: require("../assets/images/popular/slide-1.webp"),
+          title: "Family Suit",
+          bed: "2 Beds",
+          feet: "150 Sq.feet",
+          desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride.....",
+          price: "$220.0/Night",
+        },
+        {
+          id: "5",
+          img: require("../assets/images/popular/slide-2.webp"),
+          title: "Queen’s Room",
+          bed: "2 Beds",
+          feet: "150 Sq.feet",
+          desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride.....",
+          price: "$220.0/Night",
+        },
+        {
+          id: "6",
+          img: require("../assets/images/popular/slide-3.webp"),
+          title: "Family Suit",
+          bed: "2 Beds",
+          feet: "150 Sq.feet",
+          desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride.....",
+          price: "$220.0/Night",
+        },
+        {
+          id: "4",
+          img: require("../assets/images/popular/slide-1.webp"),
+          title: "Family Suit",
+          bed: "2 Beds",
+          feet: "150 Sq.feet",
+          desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride.....",
+          price: "$220.0/Night",
+        },
+        {
+          id: "5",
+          img: require("../assets/images/popular/slide-2.webp"),
+          title: "Queen’s Room",
+          bed: "2 Beds",
+          feet: "150 Sq.feet",
+          desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride.....",
+          price: "$220.0/Night",
+        },
+        {
+          id: "6",
+          img: require("../assets/images/popular/slide-3.webp"),
+          title: "Family Suit",
+          bed: "2 Beds",
+          feet: "150 Sq.feet",
+          desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride.....",
+          price: "$220.0/Night",
+        },
+      ];
+
+
+export default DestinationData;

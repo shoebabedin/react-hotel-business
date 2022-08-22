@@ -1,0 +1,141 @@
+import React from 'react';
+import Slider from 'react-slick';
+
+let Gellary = [
+    {
+        img: require("../../assets/images/destinitaion/slider-1.webp"),
+        title: 'East Terrace',
+        desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride",
+    },
+    {
+        img: require('./../../assets/images/destinitaion/slider-2.webp'),
+        title: 'East Terrace',
+        desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride",
+    },
+    {
+        img: require('./../../assets/images/destinitaion/slider-3.webp'),
+        title: 'East Terrace',
+        desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride",
+    },
+    {
+        img: require('./../../assets/images/destinitaion/slider-1.webp'),
+        title: 'East Terrace',
+        desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride",
+    },
+]
+
+const PhotoGellary = () => {
+    const gellary = {
+        dots: true,
+        arrows: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        responsive: [
+            { breakpoint: 1024, 
+                settings: { 
+                    slidesToShow: 3, 
+                    slidesToScroll: 1 
+                } },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    centerPadding: "20px",
+                },
+            },
+            { breakpoint: 480, 
+                settings: { 
+                    slidesToShow: 1, 
+                    slidesToScroll: 1 
+                } },
+        ],
+      };
+    return (
+        <div class="destination_part">
+        <div class="container mx-auto px-2 py-10">
+          <h2
+            class="text-center text-2xl lg:text-3xl font-bold uppercase mb-10 text-[#0F0E0E]"
+          >
+            pHOTO GALLERY
+          </h2>
+          <Slider {...gellary} className="destination_slider">
+                {Gellary.map((slide) => (
+                    <div
+                    class="slider_item rounded-[5px] overflow-hidden relative max-h-[512px] h-full"
+                    data-aos="fade-down"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000"
+                  >
+                    <img
+                      class="w-full h-full rounded-[5px]"
+                      src={slide.img}
+                      alt=""
+                    />
+                    <div
+                      class="overlay title-overlay bg-[#be9e57]/30 backdrop-blur-[5px] py-[32px] lg:py-[52px] px-[21px] lg:px-[32px] absolute"
+                    >
+                      <div class="text">
+                        <h3
+                          class="font-bold text-base lg:text-[22px] capitalize text-left flex items-center justify-between mb-6 text-white"
+                        >
+                          {slide.title}
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7.875 10.875H13.875"
+                              stroke="white"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M10.875 7.875V13.875"
+                              stroke="white"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M10.875 18.75C15.2242 18.75 18.75 15.2242 18.75 10.875C18.75 6.52576 15.2242 3 10.875 3C6.52576 3 3 6.52576 3 10.875C3 15.2242 6.52576 18.75 10.875 18.75Z"
+                              stroke="white"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M16.4438 16.4438L21 21.0001"
+                              stroke="white"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </h3>
+                        <p
+                          class="text-white font-normal font-normal text-sm lg:text-base"
+                        >
+                          {slide.desc}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+            </Slider>
+            
+           
+        </div>
+      </div>
+    );
+};
+
+export default PhotoGellary;
