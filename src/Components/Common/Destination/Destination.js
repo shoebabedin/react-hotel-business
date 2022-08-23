@@ -150,12 +150,12 @@ const Destination = (props) => {
                   <p className="flex items-center gap-2 font-medium md:text-base text-sm text-[#0F0E0E]/80 mb-4 lg:mb-6">
                     {slide.desc}
                   </p>
-                  <a
+                  <Link
                     className="bottom-2 p-2 font-medium lg:font-bold md:text-base text-sm text-center button border-[1px] border-[#BE9E57] rounded-[5px] text-[#BE9E57] hover:bg-[#BE9E57] hover:text-white block"
-                    href="./pages/room_details.html"
+                    to={`/roomDetails/${slide.id}`}
                   >
                     {slide.price}
-                  </a>
+                  </Link>
                 </div>
               </a>
             </div>
@@ -335,7 +335,7 @@ const Destination = (props) => {
                   </div>
                   <Link
                     className="bottom-2 p-2 font-medium lg:font-bold md:text-base text-sm text-center button border-[1px] border-[#BE9E57] rounded-[5px] text-[#BE9E57] hover:bg-[#BE9E57] hover:text-white block"
-                    to="/roomDetails"
+                    to={`/roomDetails/${slide.id}`}
                   >
                     {slide.price}
                   </Link>
