@@ -21,29 +21,29 @@ const payment = [
 
 const Footer = () => {
   return (
-    <footer class="footer py-10 text-[#0F0E0E] bg-[#0F0E0E]">
-      <div class="container mx-auto px-2 flex justify-between flex-col lg:flex-row sm:items-center lg:items-start gap-6">
-        <div class="logo">
+    <footer className="footer py-10 text-[#0F0E0E] bg-[#0F0E0E]">
+      <div className="container mx-auto px-2 grid grid-cols-12 gap-6">
+        <div className="logo lg:col-span-4 md:col-span-12 col-span-12">
           <img
-            class="mb-8 hidden lg:block"
+            className="mb-8 hidden lg:block"
             src={footer}
             alt=""
           />
           <img
-            class="mb-8 lg:hidden mx-auto"
+            className="mb-8 lg:hidden mx-auto md:w-60 w-40"
             src={mobFooter}
             alt=""
           />
         </div>
-        <div class="footer_item text-center lg:text-left">
-          <h3 class="font-semibold text-base text-[#BE9E57] mb-4 lg:mb-8">
+        <div className="footer_item text-center lg:text-left col-span-12 lg:col-span-2 md:col-span-3">
+          <h3 className="font-semibold text-base text-[#BE9E57] mb-4 lg:mb-8">
             QUICK ACCESS
           </h3>
-          <ul class="flex items-start justify-center flex-col gap-3">
+          <ul className="flex items-center md:items-start justify-center flex-col gap-3">
             <li>
               <Link
                 to="/"
-                class="font-medium text-sm text-white opacity-60 hover:opacity-100 ease-linear capitalize"
+                className="font-medium text-sm text-white opacity-60 hover:opacity-100 ease-linear capitalize"
               >
                 Home
               </Link>
@@ -51,7 +51,7 @@ const Footer = () => {
             <li>
               <Link
                 to="room"
-                class="font-medium text-sm text-white opacity-60 hover:opacity-100 ease-linear capitalize"
+                className="font-medium text-sm text-white opacity-60 hover:opacity-100 ease-linear capitalize"
               >
                 Rooms
               </Link>
@@ -59,31 +59,31 @@ const Footer = () => {
             <li>
               <Link
                 to="#"
-                class="font-medium text-sm text-white opacity-60 hover:opacity-100 ease-linear capitalize"
+                className="font-medium text-sm text-white opacity-60 hover:opacity-100 ease-linear capitalize"
               >
                 Tearms &amp; Condition
               </Link>
             </li>
           </ul>
         </div>
-        <div class="footer_item text-center lg:text-left">
-          <h3 class="font-semibold text-base text-[#BE9E57] mb-4 lg:mb-8">
+        <div className="footer_item text-center lg:text-left col-span-12 lg:col-span-2 md:col-span-3">
+          <h3 className="font-semibold text-base text-[#BE9E57] mb-4 lg:mb-8">
             ADDRESS
           </h3>
-          <p class="font-medium text-sm text-white capitalize">
-            706 Campfire Ave. Meriden, <br class="hidden md:block" />
+          <p className="font-medium text-sm text-white capitalize">
+            706 Campfire Ave. Meriden, <br className="hidden lg:block" />
             CT 06450
           </p>
         </div>
-        <div class="footer_item text-center lg:text-left">
-          <h3 class="font-semibold text-base text-[#BE9E57] mb-4 lg:mb-8">
+        <div className="footer_item text-center lg:text-left col-span-12 lg:col-span-2 md:col-span-3">
+          <h3 className="font-semibold text-base text-[#BE9E57] mb-4 lg:mb-8">
             RESERVATION
           </h3>
-          <ul class="flex items-start justify-center flex-col gap-3">
+          <ul className="flex items-center md:items-start justify-center flex-col gap-3">
             <li>
               <Link
                 to="tel:0880099887744"
-                class="font-medium text-sm text-white capitalize"
+                className="font-medium text-sm text-white capitalize"
               >
                 (+088) 0099887744
               </Link>
@@ -91,18 +91,18 @@ const Footer = () => {
             <li>
               <Link
                 to="mailto:support@example.com"
-                class="font-medium text-sm text-white capitalize"
+                className="font-medium text-sm text-white capitalize"
               >
                 support@example.com
               </Link>
             </li>
           </ul>
         </div>
-        <div class="footer_item text-center lg:text-left">
-          <h3 class="font-semibold text-base text-[#BE9E57] mb-[57px]">
+        <div className="footer_item text-center lg:text-left col-span-12 lg:col-span-2 md:col-span-3">
+          <h3 className="font-semibold text-base text-[#BE9E57] mb-[57px]">
             FOLLOW US
           </h3>
-          <ul class="flex items-center justify-center lg:justify-between gap-[30px]">
+          <ul className="flex items-center justify-center lg:justify-between gap-[30px]">
             <li>
             <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -155,16 +155,16 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div class="container mx-auto px-2 mt60 px-2">
-        <div class="tiny_footer flex items-center justify-between mt-12 flex-wrap border-t-[1px] border-solid border-[#FFFFFF33] pt-7 gap-6 flex-col md:flex-row">
-          <p class="text-white font-normal text-sm text-[#9A9EA6]">
+      <div className="container mx-auto px-2 mt60 px-2">
+        <div className="tiny_footer flex items-center justify-between mt-12 flex-wrap border-t-[1px] border-solid border-[#FFFFFF33] pt-7 gap-6 flex-col md:flex-row">
+          <p className="text-white font-normal text-sm text-[#9A9EA6]">
             &copy; 2000-2021, All Rights Reserved
           </p>
-          <ul class="flex items-center gap-6 flex-wrap justify-center mb-4 md:mb-0">
+          <ul className="flex items-center gap-6 flex-wrap justify-center mb-4 md:mb-0">
             {
                 payment.map(item => 
                     <li>
-                        <Link to="#" class="text-white font-normal text-sm text-[#9A9EA6]">
+                        <Link to="#" className="text-white font-normal text-sm text-[#9A9EA6]">
                             <img src={item.img} alt={item.img} />
                         </Link>
                     </li>

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import DestinationData from "../../JsonData/DestinationData";
 import Destination from "../Common/Destination/Destination";
 import DetailsPageSlider from "../Common/DetailsPageSlider/DetailsPageSlider";
@@ -7,6 +9,8 @@ import Subscription from "../Common/Subscription/Subscription";
 
 
 const RoomDetails = () => {
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
   return (
     <div className="details_banner">
       <section className="hotel_banner mt-6">
@@ -22,78 +26,89 @@ const RoomDetails = () => {
                       id="double_date_input"
                       className="m-auto w-full mb-2 lg:mb-0 lg:mx-2 flex flex-wrap lg:flex-nowrap"
                     >
-                      <div className="m-auto w-full lg:mx-2 mb-4">
-                        <label
-                          for="email-address-icon"
-                          className="block mb-2 text-sm font-normal text-slate-900"
-                        >
-                          CHECK-IN
-                        </label>
-                        <div className="relative">
-                          <input
-                            className="border text-sm rounded-lg block w-full p-2.5 appearance-none focus-visible:outline-none focus-visible:bg-white focus-visible:text-[rgb(15,14,14)] fromdate"
-                            placeholder="Check-In"
-                          />
-                          <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="24"
-                              height="24"
-                              fill="none"
-                              className="absolute right-2 z-10 bg-white"
-                              viewBox="0 0 24 24"
-                            >
-                              <path fill="#fff" d="M0 0H24V24H0z"></path>
-                              <path
-                                stroke="#BE9E57"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="1.5"
-                                d="M19.5 3.75h-15a.75.75 0 00-.75.75v15c0 .414.336.75.75.75h15a.75.75 0 00.75-.75v-15a.75.75 0 00-.75-.75zM16.5 2.25v3M7.5 2.25v3M4 8.25h16"
-                              ></path>
-                              <path fill="#BE9E57" d="M7 11H9V13H7z"></path>
-                              <path fill="#BE9E57" d="M11 11H13V13H11z"></path>
-                              <path fill="#BE9E57" d="M15 11H17V13H15z"></path>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="m-auto pl-1 w-full lg:mx-2 mb-4">
-                        <label
-                          for="email-address-icon"
-                          className="block mb-2 text-sm font-normal text-slate-900"
-                        >
-                          CHECK-OUT
-                        </label>
-                        <div className="relative">
-                          <input
-                            placeholder="Check-Out"
-                            className="border text-sm rounded-lg block w-full p-2.5 appearance-none focus-visible:outline-none focus-visible:bg-white focus-visible:text-[rgb(15,14,14)] todate"
-                          />
-                          <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="24"
-                              height="24"
-                              fill="none"
-                              className="absolute right-2 z-10 bg-white"
-                              viewBox="0 0 24 24"
-                            >
-                              <path fill="#fff" d="M0 0H24V24H0z"></path>
-                              <path
-                                stroke="#BE9E57"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="1.5"
-                                d="M19.5 3.75h-15a.75.75 0 00-.75.75v15c0 .414.336.75.75.75h15a.75.75 0 00.75-.75v-15a.75.75 0 00-.75-.75zM16.5 2.25v3M7.5 2.25v3M4 8.25h16"
-                              ></path>
-                              <path fill="#BE9E57" d="M7 11H9V13H7z"></path>
-                              <path fill="#BE9E57" d="M11 11H13V13H11z"></path>
-                              <path fill="#BE9E57" d="M15 11H17V13H15z"></path>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
+                     <div className="m-auto w-1/2 lg:w-full lg:mx-2 mb-4 lg:mb-0">
+                  <label
+                    for="email-address-icon"
+                    className="block mb-2 text-sm font-normal text-slate-900"
+                  >
+                    CHECK-IN
+                  </label>
+                  <div className="relative">
+                    <DatePicker
+                      className="border text-sm rounded-lg block w-full p-2.5 appearance-none focus-visible:outline-none focus-visible:bg-white focus-visible:text-[rgb(15,14,14)] fromdate"
+                      selected={startDate}
+                      selectsStart
+                      startDate={startDate}
+                      endDate={endDate}
+                      onChange={(date: Date) => setStartDate(date)}
+                    />
+
+                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        classNameName="absolute right-2 z-10 bg-white"
+                        viewBox="0 0 24 24"
+                      >
+                        <path fill="#fff" d="M0 0H24V24H0z"></path>
+                        <path
+                          stroke="#BE9E57"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="1.5"
+                          d="M19.5 3.75h-15a.75.75 0 00-.75.75v15c0 .414.336.75.75.75h15a.75.75 0 00.75-.75v-15a.75.75 0 00-.75-.75zM16.5 2.25v3M7.5 2.25v3M4 8.25h16"
+                        ></path>
+                        <path fill="#BE9E57" d="M7 11H9V13H7z"></path>
+                        <path fill="#BE9E57" d="M11 11H13V13H11z"></path>
+                        <path fill="#BE9E57" d="M15 11H17V13H15z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div className="m-auto w-1/2 pl-1 lg:w-full lg:mx-2 mb-4 lg:mb-0">
+                  <label
+                    for="email-address-icon"
+                    className="block mb-2 text-sm font-normal text-slate-900"
+                  >
+                    CHECK-OUT
+                  </label>
+                  <div className="relative">
+                    <DatePicker
+                      className="border text-sm rounded-lg block w-full p-2.5 appearance-none focus-visible:outline-none focus-visible:bg-white focus-visible:text-[rgb(15,14,14)] todate"
+                      selected={endDate}
+                      selectsEnd
+                      startDate={startDate}
+                      endDate={endDate}
+                      minDate={startDate}
+                      onChange={(date: Date) => setEndDate(date)}
+                    />
+
+                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        classNameName="absolute right-2 z-10 bg-white"
+                        viewBox="0 0 24 24"
+                      >
+                        <path fill="#fff" d="M0 0H24V24H0z"></path>
+                        <path
+                          stroke="#BE9E57"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="1.5"
+                          d="M19.5 3.75h-15a.75.75 0 00-.75.75v15c0 .414.336.75.75.75h15a.75.75 0 00.75-.75v-15a.75.75 0 00-.75-.75zM16.5 2.25v3M7.5 2.25v3M4 8.25h16"
+                        ></path>
+                        <path fill="#BE9E57" d="M7 11H9V13H7z"></path>
+                        <path fill="#BE9E57" d="M11 11H13V13H11z"></path>
+                        <path fill="#BE9E57" d="M15 11H17V13H15z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
                       <div className="md:mx-auto w-full lg:w-auto">
                         <label
                           for="email-address-icon"

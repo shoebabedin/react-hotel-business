@@ -45,7 +45,7 @@ const Destination = (props) => {
           slidesToShow: 2,
           slidesToScroll: 1,
           centerMode: true,
-          centerPadding: "20px",
+          centerPadding: "0px",
         },
       },
       {

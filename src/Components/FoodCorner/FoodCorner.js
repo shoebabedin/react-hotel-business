@@ -1,5 +1,6 @@
 import { Door, ForkKnife, TestTube, UsersThree, WifiHigh } from "phosphor-react";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "react-tabs/style/react-tabs.css";
 import foodTabs from "../../JsonData/FoodTabs";
 import HotelFood from "../../JsonData/HotelFood";
@@ -147,12 +148,12 @@ const FoodCorner = () => {
                           <p className="font-normal text-sm text-white leading-4">
                             Have a question?
                           </p>
-                          <a
+                          <Link
                             className="text-white font-bold text-sm"
-                            href="tel:3104372766"
+                            to="tel:3104372766"
                           >
                             310-437-2766
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -208,7 +209,7 @@ const FoodCorner = () => {
                     </p>
                     <ul className="flex justify-start items-center gap-4 share">
                       <li>
-                        <a href="#">
+                        <Link to="#">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="20"
@@ -224,10 +225,10 @@ const FoodCorner = () => {
                               d="M10 6.875c0-1.718 1.445-3.148 3.164-3.125a3.125 3.125 0 012.828 1.875h2.757L16.226 8.15A9.992 9.992 0 016.249 17.5c-2.5 0-3.125-.937-3.125-.937s2.5-.938 3.75-2.813c0 0-5-2.5-3.75-9.375 0 0 3.125 3.125 6.875 3.75v-1.25z"
                             ></path>
                           </svg>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#">
+                        <Link to="#">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="20"
@@ -254,10 +255,10 @@ const FoodCorner = () => {
                               d="M14.063 6.719a.781.781 0 100-1.563.781.781 0 000 1.563z"
                             ></path>
                           </svg>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#">
+                        <Link to="#">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="20"
@@ -284,7 +285,7 @@ const FoodCorner = () => {
                               d="M6.875 7.031a.781.781 0 100-1.562.781.781 0 000 1.562z"
                             ></path>
                           </svg>
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -324,7 +325,7 @@ const FoodCorner = () => {
                         {item.map(({ id, img, desc, title, price }) => {
                           return (
                            
-                              <div className="col-span-6 case_study element-item asia pb-6 border-b border-b-neutral-200 border-opacity-10">
+                              <div className="col-span-12 lg:col-span-6 case_study element-item asia pb-6 border-b border-b-neutral-200 border-opacity-10">
                                 <div className="flex items-center flex-row w-full">
                                   <div className="img w-8 md:w-14 mr-3 lg:mr-5">
                                     <img

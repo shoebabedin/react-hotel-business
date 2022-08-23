@@ -17,7 +17,7 @@ const Room = () => {
   return (
     <>
       <Banner bg={RoomBanner} img={bannerLogo} title={"Hotel Grand Prince"}>
-        <div className="m-auto w-full mb-2 lg:mb-0 lg:mx-2">
+        <div className="m-auto w-full mb-2 lg:mb-0 lg:mx-2 relative">
           <label
             for="email-address-icon"
             className="block mb-2 text-sm font-normal text-slate-900"

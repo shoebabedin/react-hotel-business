@@ -27,7 +27,7 @@ let additional = [
 const Additional = () => {
     return (
         <section class="additional_part bg-[#222222] mt-10 mb-10">
-            <div class="container px-2 py-10">
+            <div class="container px-2 py-10 overflow-x-hidden">
                 <div class="grid grid-cols-12 gap-5">
                     <div class="additional_item w-full col-span-12 lg:col-span-4">
                         <h2 class="font-semibold lg:font-bold text-2xl lg:text-2xl xl:text-4xl text-white mb-8 text-center lg:text-left">
@@ -60,9 +60,9 @@ const Additional = () => {
                                 <p class="mb-1 font-normal text-sm lg:text-sm text-white opacity-50">
                                     For resarvation
                                 </p>
-                                <a class="font-bold text-sm lg:text-base text-white" href="#">
+                                <Link class="font-bold text-sm lg:text-base text-white" to="#">
                                     310-437-2766
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

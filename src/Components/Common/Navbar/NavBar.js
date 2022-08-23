@@ -1,4 +1,5 @@
 import { Menu, Transition } from "@headlessui/react";
+import { CaretDown, CaretUp, List, X } from "phosphor-react";
 import * as React from 'react';
 import { Fragment, useEffect, useState } from 'react';
 import { Link, NavLink } from "react-router-dom";
@@ -265,27 +266,13 @@ const NavBar = () => {
           </div>
           <div className="relative flex lg:hidden">
             <div onClick={navShow} className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-white hover:bg-black focus:outline-none focus:bg-black bg-black focus:text-white cursor-pointer">
-              <svg
-                fill="none"
-                stroke="#fff"
-                className="w-6 h-6"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                  className="inline-flex"
-                ></path>
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                  className="hidden"
-                ></path>
-              </svg>
+              {mobNavShow ?
+<X size={32} color="#ffffff" />
+
+:
+<List size={32} color="#ffffff" />
+
+            }
             </div>
         </div>
       </div>
@@ -295,13 +282,13 @@ const NavBar = () => {
         <div className="container mx-auto">
           <div className="pt-2 pb-3">
             <NavLink activeClassName="is-active"
-              to="../index.html"
+              to="/"
               className="flex flex-row items-center px-3 py-2 t rounded-md text-[#0F0E0E] lg:text-white text-base font-semibold capitalize md:border-0 border-b"
             >
               <span className="ml-2">Home</span>
             </NavLink>
             <NavLink activeClassName="is-active"
-              to="./room.html"
+              to="room"
               className="flex flex-row items-center px-3 py-2 mt-1 t rounded-md text-[#0F0E0E] lg:text-white text-base font-semibold capitalize md:border-0 border-b"
             >
               <span className="ml-2">Rooms</span>
@@ -310,32 +297,10 @@ const NavBar = () => {
               <button onClick={dropDown} className="flex flex-row items-center px-3 py-2 mt-1 rounded-md text-[#0F0E0E] lg:text-white text-base font-semibold capitalize md:border-0 border-b w-full justify-between cursor-pointer">
                 <span className="mx-2">Services</span>
                 {show ? 
-                <svg
-                xmlns='http://www.w3.org/2000/svg'
-                width='15'
-                height='9'
-                fill='none'
-                viewBox='0 0 15 9'
-              >
-                <path
-                  fill='#0F0E0E'
-                  d='M14.328 7.742a.625.625 0 01-.578.383H1.25a.625.625 0 01-.578-.383.656.656 0 01.133-.687l6.25-6.25a.64.64 0 01.89 0l6.25 6.25a.657.657 0 01.133.687z'
-                ></path>
-              </svg>
+                <CaretUp size={20} color="#000" weight="fill" />
                 :
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="21"
-                  height="20"
-                  fill="none"
-                  className="w-4 h-4 mt-1 transform feather feather-chevron-down"
-                  viewBox="0 0 21 20"
-                >
-                  <path
-                    fill="#0F0E0E"
-                    d="M17.328 7.258a.625.625 0 00-.578-.383H4.25a.625.625 0 00-.578.383.656.656 0 00.133.687l6.25 6.25a.64.64 0 00.89 0l6.25-6.25a.657.657 0 00.133-.687z"
-                  ></path>
-                </svg>}
+                <CaretDown size={20} color="#000" weight="fill" />
+                }
               </button>
               {show && <div
                 
@@ -344,7 +309,7 @@ const NavBar = () => {
                 
               >
                 <NavLink activeClassName="is-active"
-                  to="./hotel_foodCorner.html"
+                  to="food-corner"
                   className="flex flex-row items-center px-3 py-2 mt-1 t rounded-md text-[#0F0E0E] lg:text-white text-sm font-semibold capitalize"
                   role="menuitem"
                 >
@@ -363,7 +328,7 @@ const NavBar = () => {
                   Food Corner
                 </NavLink>
                 <NavLink activeClassName="is-active"
-                  to="./hotel_fitness_part.html"
+                  to="fitness"
                   className="flex flex-row items-center px-3 py-2 mt-1 t rounded-md text-[#0F0E0E] lg:text-white text-sm font-semibold capitalize"
                   role="menuitem"
                 >
@@ -382,7 +347,7 @@ const NavBar = () => {
                   Fitness Center
                 </NavLink>
                 <NavLink activeClassName="is-active"
-                  to="./hotel_pool.html"
+                  to="pool"
                   className="flex flex-row items-center px-3 py-2 mt-1 t rounded-md text-[#0F0E0E] lg:text-white text-sm font-semibold capitalize"
                   role="menuitem"
                 >
@@ -418,7 +383,7 @@ const NavBar = () => {
                   pool
                 </NavLink>
                 <NavLink activeClassName="is-active"
-                  to="./hotel_bar.html"
+                  to="bar"
                   className="flex flex-row items-center px-3 py-2 mt-1 t rounded-md text-[#0F0E0E] lg:text-white text-sm font-semibold capitalize"
                   role="menuitem"
                 >
@@ -443,13 +408,13 @@ const NavBar = () => {
               </div>}
             </div>
             <NavLink activeClassName="is-active"
-              to="./events.html"
+              to="events"
               className="flex flex-row items-center px-3 py-2 mt-1 t rounded-md text-[#0F0E0E] lg:text-white text-base font-semibold capitalize md:border-0 border-b"
             >
               <span className="ml-2">Events</span>
             </NavLink>
             <NavLink activeClassName="is-active"
-              to="./contact.html"
+              to="contact"
               className="flex flex-row items-center px-3 py-2 mt-1 t rounded-md text-[#0F0E0E] lg:text-white text-base font-semibold capitalize md:border-0 border-b"
             >
               <span className="ml-2">Contanct</span>
@@ -463,7 +428,7 @@ const NavBar = () => {
             </p>
             <ul className="flex justify-center items-center gap-4 share">
               <li>
-                <a href="#">
+                <Link to="#">
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='18'
@@ -476,10 +441,10 @@ const NavBar = () => {
                       d='M8.5 3.875C8.5 2.157 9.945.727 11.664.75a3.125 3.125 0 012.828 1.875h2.758L14.726 5.15A9.992 9.992 0 014.75 14.5c-2.5 0-3.125-.937-3.125-.937s2.5-.938 3.75-2.813c0 0-5-2.5-3.75-9.375 0 0 3.125 3.125 6.875 3.75v-1.25z'
                     ></path>
                   </svg>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link to="#">
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='21'
@@ -500,10 +465,10 @@ const NavBar = () => {
                       d='M14.563 6.719a.781.781 0 100-1.563.781.781 0 000 1.563z'
                     ></path>
                   </svg>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link to="#">
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='21'
@@ -524,7 +489,7 @@ const NavBar = () => {
                       d='M7.375 7.031a.781.781 0 100-1.562.781.781 0 000 1.562z'
                     ></path>
                   </svg>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

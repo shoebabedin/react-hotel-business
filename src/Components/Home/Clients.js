@@ -61,7 +61,7 @@ let slider2 = [
     {
         name: 'Marten couper',
         star: <FaQuoteRight />,
-        title: "CEO,Red Bull",
+        title: 'CEO,Red Bull',
     },
 ]
 
@@ -100,6 +100,7 @@ const Clients = () => {
 
                 </Slider>
                 <Slider
+                className="slider slider-nav max-w-[1076px] w-full mx-auto border-t border-[#be9e57] pt-12"
                     asNavFor={nav1}
                     ref={(slider2) => setNav2(slider2)}
                     slidesToShow={5}
@@ -110,7 +111,20 @@ const Clients = () => {
                     centerPadding={'0px'}
                     centerMode={true}
                     arrows={false}
-                    className="slider slider-nav max-w-[1076px] w-full mx-auto border-t border-[#be9e57] pt-12"
+                    responsive=
+                    {[
+                            {
+                                breakpoint: 600,
+                                settings: {
+                                  slidesToShow: 3,
+                                  slidesToScroll: 2,
+                                  centerMode: true,
+                                  centerPadding: '20px'
+                                }
+
+                            }
+                        ]}
+                    
                 >
                     {
                         slider2.map(item => 

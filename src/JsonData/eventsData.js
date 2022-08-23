@@ -1,4 +1,4 @@
-const eventsData = [
+const EventsData = [
     {
         img: require('../assets/images/events/1.webp'),
         title: 'Valentine Dinner',
@@ -7,11 +7,11 @@ const eventsData = [
         checkTime: 'Check-in Time',
         checkTimeList: [
             {
-                text: 'From 9:00 AM - anytime',
+                text: 'From 9:00 AM - anytime'
             },
             {
-                text: 'Early check-in subject to accessibility',
-            }
+                text: 'Early check-in subject to accessibility'
+            },
         ],
        call: '310-437-2766',
     },
@@ -23,11 +23,11 @@ const eventsData = [
         checkTime: 'Check-in Time',
         checkTimeList: [
             {
-                text: 'From 9:00 AM - anytime',
+                text: 'From 9:00 AM - anytime'
             },
             {
-                text: 'Early check-in subject to accessibility',
-            }
+                text: 'Early check-in subject to accessibility'
+            },
         ],
         call: '310-437-2766',
     },
@@ -39,11 +39,11 @@ const eventsData = [
         checkTime: 'Check-in Time',
         checkTimeList: [
             {
-                text: 'From 9:00 AM - anytime',
+                text: 'From 9:00 AM - anytime'
             },
             {
-                text: 'Early check-in subject to accessibility',
-            }
+                text: 'Early check-in subject to accessibility'
+            },
         ],
         call: '310-437-2766',
     },
@@ -51,4 +51,4 @@ const eventsData = [
 
 
 
-export default eventsData;
+export default EventsData;

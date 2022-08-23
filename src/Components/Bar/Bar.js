@@ -1,10 +1,11 @@
 import {
-    Door,
-    ForkKnife,
-    TestTube,
-    UsersThree
+  Door,
+  ForkKnife,
+  TestTube,
+  UsersThree
 } from "phosphor-react";
 import React from "react";
+import { Link } from "react-router-dom";
 import pool from "../../JsonData/pool";
 import DetailsPageSlider from "../Common/DetailsPageSlider/DetailsPageSlider";
 import Subscription from "../Common/Subscription/Subscription";
@@ -100,12 +101,12 @@ const Bar = () => {
                           <p className="font-normal text-sm text-white leading-4">
                             Have a question?
                           </p>
-                          <a
-                            className="text-white font-bold text-sm"
+                          <Link
+                            to="text-white font-bold text-sm"
                             href="tel:3104372766"
                           >
                             310-437-2766
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -157,7 +158,7 @@ const Bar = () => {
                     </p>
                     <ul className="flex justify-start items-center gap-4 share">
                       <li>
-                        <a href="#">
+                        <Link to="#">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="20"
@@ -173,10 +174,10 @@ const Bar = () => {
                               d="M10 6.875c0-1.718 1.445-3.148 3.164-3.125a3.125 3.125 0 012.828 1.875h2.757L16.226 8.15A9.992 9.992 0 016.249 17.5c-2.5 0-3.125-.937-3.125-.937s2.5-.938 3.75-2.813c0 0-5-2.5-3.75-9.375 0 0 3.125 3.125 6.875 3.75v-1.25z"
                             ></path>
                           </svg>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#">
+                        <Link to="#">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="20"
@@ -203,10 +204,10 @@ const Bar = () => {
                               d="M14.063 6.719a.781.781 0 100-1.563.781.781 0 000 1.563z"
                             ></path>
                           </svg>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#">
+                        <Link to="#">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="20"
@@ -233,7 +234,7 @@ const Bar = () => {
                               d="M6.875 7.031a.781.781 0 100-1.562.781.781 0 000 1.562z"
                             ></path>
                           </svg>
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>

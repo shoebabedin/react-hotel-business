@@ -44,8 +44,6 @@ const PhotoGellary = () => {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    centerMode: true,
-                    centerPadding: "20px",
                 },
             },
             { breakpoint: 480, 
@@ -56,32 +54,32 @@ const PhotoGellary = () => {
         ],
       };
     return (
-        <div class="destination_part">
-        <div class="container mx-auto px-2 py-10">
+        <div className="destination_part">
+        <div className="container mx-auto px-2 py-10">
           <h2
-            class="text-center text-2xl lg:text-3xl font-bold uppercase mb-10 text-[#0F0E0E]"
+            className="text-center text-2xl lg:text-3xl font-bold uppercase mb-10 text-[#0F0E0E]"
           >
             pHOTO GALLERY
           </h2>
           <Slider {...gellary} className="destination_slider">
                 {Gellary.map((slide) => (
                     <div
-                    class="slider_item rounded-[5px] overflow-hidden relative max-h-[512px] h-full"
+                    className="slider_item rounded-[5px] overflow-hidden relative max-h-[512px] h-full focus-visible:outline-[0px]"
                     data-aos="fade-down"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="1000"
                   >
                     <img
-                      class="w-full h-full rounded-[5px]"
+                      className="w-full h-full rounded-[5px]"
                       src={slide.img}
                       alt=""
                     />
                     <div
-                      class="overlay title-overlay bg-[#be9e57]/30 backdrop-blur-[5px] py-[32px] lg:py-[52px] px-[21px] lg:px-[32px] absolute"
+                      className="overlay title-overlay bg-[#be9e57]/30 backdrop-blur-[5px] py-[32px] lg:py-[52px] px-[21px] lg:px-[32px] absolute"
                     >
-                      <div class="text">
+                      <div className="text">
                         <h3
-                          class="font-bold text-base lg:text-[22px] capitalize text-left flex items-center justify-between mb-6 text-white"
+                          className="font-bold text-base lg:text-[22px] capitalize text-left flex items-center justify-between mb-6 text-white"
                         >
                           {slide.title}
                           <svg
@@ -122,7 +120,7 @@ const PhotoGellary = () => {
                           </svg>
                         </h3>
                         <p
-                          class="text-white font-normal font-normal text-sm lg:text-base"
+                          className="text-white font-normal font-normal text-sm lg:text-base"
                         >
                           {slide.desc}
                         </p>

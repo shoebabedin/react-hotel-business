@@ -7,11 +7,11 @@ const Banner = (props) => {
 
   const event = window.location.pathname === "/events";
 
-  const {img, desc, title, btn, bg, children, classs} = props;
+  const {img, desc, title, btn, bg, children, className} = props;
   
   
   return (
-    <section style={{backgroundImage: `url(${bg})`}} className={`${event && classs} banner bg-cover bg-center bg-no-repeat py-5`} >
+    <section style={{backgroundImage: `url(${bg})`}} className={`${event && className} banner bg-cover bg-center bg-no-repeat py-5`} >
       <div className="container mx-auto px-2 pb-2">
         <div className="pb-4 text-center lg:text-left">
           <div className="slider_item mx-auto text-center">
