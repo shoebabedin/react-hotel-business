@@ -1,10 +1,6 @@
-import {
-  Door,
-  ForkKnife,
-  TestTube,
-  UsersThree
-} from "phosphor-react";
+import { Door, ForkKnife, TestTube, UsersThree } from "phosphor-react";
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import pool from "../../JsonData/pool";
 import DetailsPageSlider from "../Common/DetailsPageSlider/DetailsPageSlider";
@@ -12,8 +8,11 @@ import Subscription from "../Common/Subscription/Subscription";
 import Clients from "../Home/Clients";
 
 const Bar = () => {
-    return (
-        <div className="details_banner">
+  return (
+    <div className="details_banner">
+      <Helmet>
+          <title>Service-Lounge bar</title>
+        </Helmet>
       <section className="hotel_banner mt-6">
         <div className="container mx-auto px-2 pb-2">
           <DetailsPageSlider slider={pool} />
@@ -21,26 +20,29 @@ const Bar = () => {
             <div className="container mx-auto px-2">
               <div className="grid grid-cols-12 gap-4">
                 <div className="col-span-12 lg:col-span-10 lg:mr-28">
-                    <h2 class="font-bold text-base lg:text-4xl text-[#151515] mb-[26px]">
+                  <h2 class="font-bold text-base lg:text-4xl text-[#151515] mb-[26px]">
                     Lounge bar
-                    </h2>
-                    <p class="font-normal text-sm lg:text-base text-[#0e0e0e]">
-              Fitness Center of
-              <strong class="lobster capitalize"
-                >Hotel Grand Prince<span class="text-red-700">.</span></strong
-              >The Restaurant is commended for its phenomenal food and one of a
-              kind climate. The perfect lounge area highlights three open studio
-              kitchens, permitting you to partake in the sights and hints of the
-              culinary imaginativeness in plain view.
-              <br />
-              <br />
-              The menu exhibits both Asian and European impacts, with an
-              enticing determination of exemplary top picks and imaginative
-              dishes for you to test. Cheddar specialists will be attracted to
-              The Wine and Cheese Cellar, housed in five-meter-high glass
-              dividers, where our learned staff can acquaint you with some of
-              New York's most noteworthy culinary fortunes.
-            </p>
+                  </h2>
+                  <p class="font-normal text-sm lg:text-base text-[#0e0e0e]">
+                    Fitness Center of
+                    <strong class="lobster capitalize">
+                      Hotel Grand Prince<span class="text-red-700">.</span>
+                    </strong>
+                    The Restaurant is commended for its phenomenal food and one
+                    of a kind climate. The perfect lounge area highlights three
+                    open studio kitchens, permitting you to partake in the
+                    sights and hints of the culinary imaginativeness in plain
+                    view.
+                    <br />
+                    <br />
+                    The menu exhibits both Asian and European impacts, with an
+                    enticing determination of exemplary top picks and
+                    imaginative dishes for you to test. Cheddar specialists will
+                    be attracted to The Wine and Cheese Cellar, housed in
+                    five-meter-high glass dividers, where our learned staff can
+                    acquaint you with some of New York's most noteworthy
+                    culinary fortunes.
+                  </p>
                   <ul className="flex items-start lg:items-center justify-start gap-2 lg:gap-28 mt-5 flex-col lg:flex-row">
                     <li className="check_in list-disc ml-5 col-span-12 lg:col-span-4">
                       <h4 className="font-medium text-xl text-black mb-4">
@@ -117,11 +119,11 @@ const Bar = () => {
                     Facilitics
                   </h2>
                   <ul>
-                  <li className="flex items-center justify-start mb-7 gap-2 font-medium text-sm lg:text-xl text-[#0F0E0E] opacity-50 lg:opacity-100">
+                    <li className="flex items-center justify-start mb-7 gap-2 font-medium text-sm lg:text-xl text-[#0F0E0E] opacity-50 lg:opacity-100">
                       <UsersThree size={32} color="#BE9E57" />
                       1-2 Persons
                     </li>
-                  
+
                     <li className="flex items-center justify-start gap-2 mb-7 font-medium text-sm lg:text-xl text-[#0F0E0E] opacity-50 lg:opacity-100">
                       <Door size={32} color="#BE9E57" />
                       100 sqft room
@@ -246,9 +248,9 @@ const Bar = () => {
       </section>
 
       <Clients />
-      <Subscription/>
+      <Subscription />
     </div>
-    );
+  );
 };
 
 export default Bar;

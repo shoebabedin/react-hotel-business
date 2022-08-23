@@ -1,39 +1,38 @@
 import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
-import Footer from '../Footer/Footer';
-import NavBar from '../Navbar/NavBar';
-import TopNav from '../Navbar/TopNav';
-import Preloader from '../Preloader/Preloader';
+import Footer from "../Footer/Footer";
+import NavBar from "../Navbar/NavBar";
+import TopNav from "../Navbar/TopNav";
+import Preloader from "../Preloader/Preloader";
 import ToTop from "../ToTop/ToTop";
 
 const Layout = () => {
-    const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-
-
+  const [title, setTitle] = useState("");
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/todos/1")
-      .then((response) => response.json())
-      .then((json) => {
-        setLoading(false);
-      })
-      .catch((err) => {
-        setLoading(false);
-      });
-  }, []);
+    const fetchData = async () => {
+      // We pretend to be fetching data from a server and it takes 3 seconds
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+      // When the data "fetching" process is complete, we will set the title and content
+      
+      setLoading(false);
+    };
 
-  
-    return (
-        <main id="main">
-            {loading && <Preloader />}
-            <TopNav />
-              <NavBar/>
-           
-            <Outlet />
-            <ToTop/>
-            <Footer/>
-        </main>
-    );
+    fetchData();
+  }, [title]);
+
+  return (
+    <main id="main">
+        {loading && <Preloader />}
+        <TopNav />
+        <NavBar />
+        <Outlet />
+        <ToTop />
+        <Footer />
+      
+    </main>
+  );
 };
 
 export default Layout;

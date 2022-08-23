@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import eventBanner from "../../assets/images/events/event_banner.webp";
 import data from "../../JsonData/events-data.json";
@@ -20,6 +21,9 @@ const Events = () => {
 
   return (
     <>
+    <Helmet>
+          <title>Events</title>
+        </Helmet>
       <Banner bg={eventBanner} title="Hotel Grand Prince" className="pt-[100px] pb-[100px]"/>
       <div className="delux_part my-[80px]">
         <div className="container mx-auto px-2">

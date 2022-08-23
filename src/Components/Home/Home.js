@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import homeBanner from "../../assets/images/banner/banner.webp";
 import DestinationData from "../../JsonData/DestinationData";
 import Banner from "../Common/Banner/Banner";
@@ -13,8 +14,6 @@ import PhotoGellary from "./PhotoGellary";
 const Home = () => {
   const [person, setPerson] = useState(0);
 
-
-
   // increment & decrement
   const decrement = () => {
     if (person > 0) {
@@ -27,6 +26,9 @@ const Home = () => {
 
   return (
     <>
+        <Helmet>
+          <title>Home</title>
+        </Helmet>
       <Banner
         bg={homeBanner}
         img={bannerLogo}

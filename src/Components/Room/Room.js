@@ -6,16 +6,14 @@ import Destination from "../Common/Destination/Destination";
 import MultiRangeSlider from "../Common/MultiRangeSlider/MultiRangeSlider";
 import bannerLogo from "./../../assets/images/banner/bannerLogo.webp";
 
-
-
-
+import { Helmet } from "react-helmet";
 
 const Room = () => {
-
-
-
   return (
     <>
+      <Helmet>
+        <title>Rooms</title>
+      </Helmet>
       <Banner bg={RoomBanner} img={bannerLogo} title={"Hotel Grand Prince"}>
         <div className="m-auto w-full mb-2 lg:mb-0 lg:mx-2 relative">
           <label
@@ -39,9 +37,11 @@ const Room = () => {
         addClass={"popular_part"}
         heading={"aVAILABLE rOOMS"}
         headingText={"!text-left"}
-        desc={"We Choose this rooms only for you.This rooms are popular by our clint’s choice."} data={DestinationData} >
-        
-    </Destination>
+        desc={
+          "We Choose this rooms only for you.This rooms are popular by our clint’s choice."
+        }
+        data={DestinationData}
+      ></Destination>
     </>
   );
 };

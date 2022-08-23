@@ -1,9 +1,13 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import contactImg from '../../assets/images/contact/location-map.webp';
 
 const Contact = () => {
   return (
     <div className="delux_part py-[50px]">
+      <Helmet>
+          <title>Contact us</title>
+        </Helmet>
       <div className="container mx-auto px-2">
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12">

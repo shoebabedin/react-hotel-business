@@ -1,5 +1,6 @@
 import { Door, ForkKnife, TestTube, UsersThree, WifiHigh } from "phosphor-react";
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import "react-tabs/style/react-tabs.css";
 import foodTabs from "../../JsonData/FoodTabs";
@@ -14,6 +15,10 @@ const FoodCorner = () => {
   const [tabBtn, setTabBtn] = useState(0);
 
   return (
+    <>
+        <Helmet>
+          <title>Service-Food Corner</title>
+        </Helmet>
     <div className="details_banner">
       <section className="hotel_banner mt-6">
         <div className="container mx-auto px-2 pb-2">
@@ -367,6 +372,7 @@ const FoodCorner = () => {
       <Clients />
       <Destination heading={"Our Popular Food"} slider2={HotelFood} />
     </div>
+    </>
   );
 };
 

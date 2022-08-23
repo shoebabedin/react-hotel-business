@@ -57,6 +57,10 @@ const Destination = (props) => {
       },
     ],
   };
+
+
+
+
   return (
     <div className={`destination_part container mx-auto py-10 ${addClass}`}>
       <h2
@@ -163,7 +167,7 @@ const Destination = (props) => {
         <>
           <div className="popular_grid grid grid-cols-1 lg:grid-cols-3 gap-6">
             {data?.slice(0, visible).map((item) => (
-              <div
+              <div key={item.id}
                 className="popular_item mx-1 mr-6 text-[#0F0E0E]02 rounded-[5px]"
                 data-aos="fade-down"
                 data-aos-easing="ease-out-cubic"
@@ -236,7 +240,7 @@ const Destination = (props) => {
 
                     <Link
                       className="bottom-2 p-2 font-medium lg:font-bold md:text-base text-sm text-center button border-[1px] border-[#BE9E57] rounded-[5px] text-[#BE9E57] hover:bg-[#BE9E57] hover:text-white block"
-                      to="/roomDetails"
+                      to={`/roomDetails/${item.id}`}
                     >
                       {item.price}
                     </Link>

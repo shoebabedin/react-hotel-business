@@ -7,9 +7,6 @@ import Logo2 from '../../../assets/images/Logo/logo-2.webp';
 import Logo1 from '../../../assets/images/Logo/logo.webp';
 
 
-
-
-
 const NavBar = () => {
 
   const page = window.location.pathname === "/" || window.location.pathname === "/home";

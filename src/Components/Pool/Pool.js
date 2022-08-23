@@ -2,6 +2,7 @@ import {
   ForkKnife, HandSoap, Shower, WifiHigh
 } from "phosphor-react";
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import pool from "../../JsonData/pool";
 import DetailsPageSlider from "../Common/DetailsPageSlider/DetailsPageSlider";
@@ -11,6 +12,9 @@ import Clients from "../Home/Clients";
 const Pool = () => {
   return (
     <div className="details_banner">
+      <Helmet>
+          <title>Service-POOL</title>
+        </Helmet>
       <section className="hotel_banner mt-6">
         <div className="container mx-auto px-2 pb-2">
           <DetailsPageSlider slider={pool} />
