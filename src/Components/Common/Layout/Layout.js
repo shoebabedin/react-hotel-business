@@ -17,13 +17,16 @@ const Layout = () => {
       // When the data "fetching" process is complete, we will set the title and content
       
       setLoading(false);
+      const styleLoading = {
+
+      }
     };
 
     fetchData();
   }, [title]);
 
   return (
-    <main id="main">
+    <main id="main" className={`${loading && 'overflow-hidden'}`}>
         {loading && <Preloader />}
         <TopNav />
         <NavBar />

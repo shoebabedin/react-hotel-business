@@ -40,7 +40,7 @@ const Facilities = () => {
                         facilities.map(item => 
                             
                             <div
-                            class="col-span-12 md:col-span-6 lg:col-span-3 facilities_item p-7 shadow-[0px_0px_2px_rgba(195,195,195,1)] rounded-lg flex justify-center flex-col items-center lg:items-baseline w-full lg:text-left cursor-pointer z-[1]"
+                            class="col-span-12 md:col-span-6 lg:col-span-3 facilities_item p-7 shadow-[0px_0px_2px_rgba(195,195,195,1)] rounded-lg flex justify-center flex-col items-center lg:items-baseline w-full lg:text-left cursor-pointer -z-[1]"
                             data-aos="fade-down"
                             data-aos-easing="linear"
                             data-aos-duration="1000"
