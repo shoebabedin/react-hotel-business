@@ -2,23 +2,20 @@ import { Menu, Transition } from "@headlessui/react";
 import { CaretDown, CaretUp, List, X } from "phosphor-react";
 import * as React from 'react';
 import { Fragment, useEffect, useState } from 'react';
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import Logo2 from '../../../assets/images/Logo/logo-2.webp';
 import Logo1 from '../../../assets/images/Logo/logo.webp';
 
 
 const NavBar = () => {
 
-  const page = window.location.pathname === "/" || window.location.pathname === "/home";
+  const page = window.location.pathname === "/" || window.location.pathname == "/home";
 
 
   const [show, setShow] = useState(false);
   const [mobNavShow, setMobNavShow] = useState(false);
   const [stickyNav, setStickyNav] = useState(false);
   const [isOpen, setOpen] = useState(false);
-  
-
-  
 
 
   useEffect(() => {
@@ -36,8 +33,10 @@ const NavBar = () => {
     setMobNavShow(!mobNavShow);
   }
 
+  
+
   return (
-    <nav className={`nav z-50  ${isOpen && "is-active"} ${page ? 'homeNav' : 'bg-white'} ${stickyNav ? 'sticky' : ''}`} >
+    <nav className={`nav z-50  ${isOpen && "is-active"} ${page && 'homeNav'} ${stickyNav ? 'sticky' : ''} ${useLocation().pathname !== "/"}`} >
       <div className="container mx-auto px-2">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center justify-between flex-grow">
