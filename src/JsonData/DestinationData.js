@@ -9,6 +9,7 @@
           feet: "150 Sq.feet",
           desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride.....",
           price: "$220.0/Night",
+          person: 2,
         },
         {
           id: 2,
@@ -18,6 +19,8 @@
           feet: "150 Sq.feet",
           desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride.....",
           price: "$320.0/Night",
+          checkIn: "",
+          checkOut: "",
         },
         {
           id: 3,
@@ -27,6 +30,8 @@
           feet: "150 Sq.feet",
           desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride.....",
           price: "$420.0/Night",
+          checkIn: "",
+          checkOut: "",
         },
         {
           id: 4,
@@ -36,6 +41,8 @@
           feet: "150 Sq.feet",
           desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride.....",
           price: "$520.0/Night",
+          checkIn: "",
+          checkOut: "",
         },
         {
           id: 5,
@@ -45,6 +52,8 @@
           feet: "150 Sq.feet",
           desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride.....",
           price: "$620.0/Night",
+          checkIn: "",
+          checkOut: "",
         },
         {
           id: 6,
@@ -54,6 +63,8 @@
           feet: "150 Sq.feet",
           desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride.....",
           price: "$720.0/Night",
+          checkIn: "",
+          checkOut: "",
         },
         {
           id: 7,
@@ -63,6 +74,8 @@
           feet: "150 Sq.feet",
           desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride.....",
           price: "$820.0/Night",
+          checkIn: "",
+          checkOut: "",
         },
         {
           id: 8,
@@ -72,6 +85,8 @@
           feet: "150 Sq.feet",
           desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride.....",
           price: "$920.0/Night",
+          checkIn: "",
+          checkOut: "",
         },
         {
           id: 9,
@@ -81,6 +96,8 @@
           feet: "150 Sq.feet",
           desc: "We'll get from air terminal while you comfortable on your ride, We'll get from air terminal while you comfortable on your ride.....",
           price: "$1020.0/Night",
+          checkIn: "",
+          checkOut: "",
         },
       ];
 

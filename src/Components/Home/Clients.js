@@ -108,6 +108,7 @@ const Clients = () => {
                     swipeToSlide={true}
                     focusOnSelect={true}
                     speed={1000}
+                    autoplay={true}
                     centerPadding={'0px'}
                     centerMode={true}
                     arrows={false}

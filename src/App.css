@@ -198,7 +198,9 @@ nav a:hover::after {
 .sticky .logo.hidden {
   display: block;
 }
-.sticky .nav_item .link,
+.sticky .nav_item .link {
+  color: rgba(15, 14, 14, 0.3);
+}
 .sticky .question .link {
   color: #0f0e0e;
 }

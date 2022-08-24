@@ -34,19 +34,18 @@ const Facilities = () => {
         <section class="our_facilities py-10">
             <div class="container mx-auto px-2">
                 <div
-                    class="facilities  gap-3 text-center grid grid-cols-12"
+                    class="facilities gap-3 text-center grid grid-cols-12"
                 >
                     {
                         facilities.map(item => 
                             
                             <div
-                            class="col-span-12 md:col-span-6 lg:col-span-3 facilities_item p-7 border hover:border-transparent rounded-lg flex justify-center flex-col items-center lg:items-baseline w-full lg:text-left cursor-pointer -z-[1] "
+                            class="col-span-12 md:col-span-6 lg:col-span-3 facilities_item p-7 shadow-[0px_0px_2px_rgba(195,195,195,1)] rounded-lg flex justify-center flex-col items-center lg:items-baseline w-full lg:text-left cursor-pointer z-[1]"
                             data-aos="fade-down"
                             data-aos-easing="linear"
                             data-aos-duration="1000"
                         >
 
-                            {/* <i className={`${item.svg} w-auto h-10 bg-no-repeat bg-center lg:bg-left bg-auto cursor-pointer`}></i> */}
                             <span className={`${item.svg} w-[-webkit-fill-available] h-10 bg-no-repeat bg-center lg:bg-left bg-auto cursor-pointer`}></span>
                             
     

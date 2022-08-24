@@ -61,22 +61,22 @@ const NavBar = () => {
               <div className="flex items-center">
                 <NavLink activeClassName="is-active" 
                   to="/"
-                  className={`${page ? 'text-white/[.6] hover:text-white/[1]' : 'text-[#0f0e0e]'} flex flex-row items-center px-3 py-2 text-sm font-medium   rounded-md focus:outline-none relative link`}
+                  className={`${page ? 'text-white/[.6] hover:text-white/[1]' : 'text-[#0f0e0e]/30'} flex flex-row items-center px-3 py-2 text-sm font-medium rounded-md focus:outline-none relative link`}
                 >
                   <span className="ml-2">Home</span>
                 </NavLink>
                 <NavLink activeClassName="is-active"
                   to="room"
-                  className={`${page ? 'text-white/[.6] hover:text-white/[1]' : 'text-[#0f0e0e]'} flex flex-row items-center px-3 py-2 text-sm font-medium rounded-md focus:outline-none relative link`}
+                  className={`${page ? 'text-white/[.6] hover:text-white/[1]' : 'text-[#0f0e0e]/30'} flex flex-row items-center px-3 py-2 text-sm font-medium rounded-md focus:outline-none relative link`}
                 >
                   <span className="ml-2">Rooms</span>
                 </NavLink>
-                <NavLink activeClassName="is-active" to="events" className={` flex flex-row items-center px-3 py-2 text-sm font-medium rounded-md focus:outline-none relative link ${page ? 'text-white/[.6] hover:text-white/[1]' : 'text-[#0f0e0e]'}`}
+                <NavLink activeClassName="is-active" to="events" className={` flex flex-row items-center px-3 py-2 text-sm font-medium rounded-md focus:outline-none relative link ${page ? 'text-white/[.6] hover:text-white/[1]' : 'text-[#0f0e0e]/30'}`}
                 >
                   <span className="ml-2">Events</span>
                 </NavLink>
                 <Menu as="div" className="relative">
-                  <Menu.Button className={`${page ? 'text-white/[.6] hover:text-white/[1]' : 'text-[#0f0e0e]'} flex flex-row items-center px-3 py-2 text-sm font-medium text-white rounded-md focus:outline-none link no-underline`}>
+                  <Menu.Button className={`${page ? 'text-white/[.6] hover:text-white/[1]' : 'text-[#0f0e0e]/30'} flex flex-row items-center px-3 py-2 text-sm font-medium  rounded-md focus:outline-none link no-underline`}>
                     <span className="mx-2">Services</span>
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
@@ -86,7 +86,7 @@ const NavBar = () => {
                       viewBox='0 0 15 9'
                     >
                       <path
-                        fill={`${stickyNav ? '#000 ' : page ? '#fff' : '#0f0e0e'}`}
+                        fill={`${stickyNav ? '#0f0e0e4d ' : page ? '#fff' : '#0f0e0e4d'}`}
                         d='M14.328 1.258a.625.625 0 00-.578-.383H1.25a.625.625 0 00-.578.383.656.656 0 00.133.687l6.25 6.25a.64.64 0 00.89 0l6.25-6.25a.657.657 0 00.133-.687z'
                       ></path>
                     </svg>
@@ -211,7 +211,7 @@ const NavBar = () => {
 
                 <NavLink activeClassName="is-active"
                   to="contact"
-                  className={`${page ? 'text-white/[.6] hover:text-white/[1]' : 'text-[#0f0e0e]'} flex flex-row items-center px-3 py-2 text-sm font-medium rounded-md focus:outline-none relative link`}
+                  className={`${page ? 'text-white/[.6] hover:text-white/[1]' : 'text-[#0f0e0e]/30'} flex flex-row items-center px-3 py-2 text-sm font-medium rounded-md focus:outline-none relative link`}
                 >
                   <span className="ml-2">Contact</span>
                 </NavLink>
