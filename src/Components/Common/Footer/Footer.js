@@ -102,7 +102,7 @@ const Footer = () => {
           <h3 className="font-semibold text-base text-[#BE9E57] mb-[57px]">
             FOLLOW US
           </h3>
-          <ul className="flex items-center justify-center lg:justify-between gap-[30px]">
+          <ul className="flex items-center justify-center lg:justify-start gap-[30px]">
             <li>
             <svg
       xmlns='http://www.w3.org/2000/svg'
