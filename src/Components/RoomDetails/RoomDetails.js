@@ -248,7 +248,7 @@ const RoomDetails = (props) => {
                     Facilitics
                   </h2>
                   <ul>
-                    <li className="flex items-center justify-start mb-7 font-medium text-sm lg:text-xl text-[#0F0E0E] opacity-50 lg:opacity-100">
+                    <li className="flex items-center justify-start gap-2 mb-7 font-medium text-sm lg:text-xl text-[#0F0E0E] opacity-50 lg:opacity-100">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="32"
@@ -266,7 +266,7 @@ const RoomDetails = (props) => {
                       </svg>
                       1-2 Persons
                     </li>
-                    <li className="flex items-center justify-start mb-7 font-medium text-sm lg:text-xl text-[#0F0E0E] opacity-50 lg:opacity-100">
+                    <li className="flex items-center justify-start gap-2 mb-7 font-medium text-sm lg:text-xl text-[#0F0E0E] opacity-50 lg:opacity-100">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="32"
@@ -288,7 +288,7 @@ const RoomDetails = (props) => {
                       </svg>
                       Free Wifi
                     </li>
-                    <li className="flex items-center justify-start mb-7 font-medium text-sm lg:text-xl text-[#0F0E0E] opacity-50 lg:opacity-100">
+                    <li className="flex items-center justify-start gap-2 mb-7 font-medium text-sm lg:text-xl text-[#0F0E0E] opacity-50 lg:opacity-100">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="32"
@@ -310,7 +310,7 @@ const RoomDetails = (props) => {
                       </svg>
                       100 sqft room
                     </li>
-                    <li className="flex items-center justify-start mb-7 font-medium text-sm lg:text-xl text-[#0F0E0E] opacity-50 lg:opacity-100">
+                    <li className="flex items-center justify-start gap-2 mb-7 font-medium text-sm lg:text-xl text-[#0F0E0E] opacity-50 lg:opacity-100">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="32"
@@ -328,7 +328,7 @@ const RoomDetails = (props) => {
                       </svg>
                       Breakfast
                     </li>
-                    <li className="flex items-center justify-start mb-7 font-medium text-sm lg:text-xl text-[#0F0E0E] opacity-50 lg:opacity-100">
+                    <li className="flex items-center justify-start gap-2 mb-7 font-medium text-sm lg:text-xl text-[#0F0E0E] opacity-50 lg:opacity-100">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="32"
@@ -345,7 +345,7 @@ const RoomDetails = (props) => {
                       </svg>
                       Swimming Pool
                     </li>
-                    <li className="flex items-center justify-start mb-7 font-medium text-sm lg:text-xl text-[#0F0E0E] opacity-50 lg:opacity-100">
+                    <li className="flex items-center justify-start gap-2 mb-7 font-medium text-sm lg:text-xl text-[#0F0E0E] opacity-50 lg:opacity-100">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="32"

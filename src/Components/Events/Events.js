@@ -6,9 +6,6 @@ import data from "../../JsonData/events-data.json";
 import Banner from "../Common/Banner/Banner";
 import Pagination from "../Common/Pagination/Pagination";
 
-
-
-
 const Events = () => {
   const [currentPage, setCurrentPage] = useState(1);
   let PageSize = 3;
@@ -18,20 +15,26 @@ const Events = () => {
     return data.slice(firstPageIndex, lastPageIndex);
   }, [currentPage]);
 
-
   return (
     <>
-    <Helmet>
-          <title>Events</title>
-        </Helmet>
-      <Banner bg={eventBanner} title="Hotel Grand Prince" className="pt-[100px] pb-[100px]"/>
+      <Helmet>
+        <title>Events</title>
+      </Helmet>
+      <Banner
+        bg={eventBanner}
+        title="Hotel Grand Prince"
+        className="pt-[100px] pb-[100px]"
+      />
       <div className="delux_part my-[80px]">
         <div className="container mx-auto px-2">
           <div className="grid grid-cols-12 gap-4">
             <div className="col-span-12">
               <div className="event_part">
                 {currentTableData.map((item, index) => (
-                  <div key={index} className="events-item max-w-7xl mx-auto flex items-start  justify-start gap-4 lg:gap-16 mb-6 flex-col lg:flex-row mb-10 lg:mb-16">
+                  <div
+                    key={index}
+                    className="events-item max-w-7xl mx-auto flex items-start  justify-start gap-4 lg:gap-16 mb-6 flex-col lg:flex-row mb-10 lg:mb-16"
+                  >
                     <div className="event-img">
                       <img
                         className="skewElem"
@@ -101,7 +104,10 @@ const Events = () => {
                               <p className="font-normal text-sm text-white leading-4">
                                 For Reservation
                               </p>
-                              <Link className="text-white font-bold text-sm" to={`tel:${item.call}`}>
+                              <Link
+                                className="text-white font-bold text-sm"
+                                to={`tel:${item.call}`}
+                              >
                                 {item.call}
                               </Link>
                             </div>
@@ -110,11 +116,12 @@ const Events = () => {
                       </div>
                     </div>
                   </div>
-                
                 ))}
               </div>
             </div>
           </div>
+
+          {/* pagination */}
           <Pagination
             className="pagination-bar"
             currentPage={currentPage}
@@ -122,7 +129,6 @@ const Events = () => {
             pageSize={PageSize}
             onPageChange={(page) => setCurrentPage(page)}
           />
-          
         </div>
       </div>
     </>
