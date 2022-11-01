@@ -18,7 +18,6 @@ import RoomDetails from "./Components/RoomDetails/RoomDetails";
 function App() {
   const [page, setPage] = useState("");
 
-  console.log(page);
   useEffect(() => {
     AOS.init();
     AOS.refresh();

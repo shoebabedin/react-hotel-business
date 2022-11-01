@@ -18,10 +18,7 @@ const RoomDetails = (props) => {
     return item.id == params.id;
   });
 
-  console.log("params", params);
-  console.log("singleEpisode", singleEpisode);
-  // console.log('destination',DestinationData);
-  // console.log('single episode',singleEpisode.id);
+
 
   return (
     <div className="details_banner">

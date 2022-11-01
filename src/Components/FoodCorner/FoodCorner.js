@@ -9,7 +9,6 @@ import Destination from "../Common/Destination/Destination";
 import DetailsPageSlider from "../Common/DetailsPageSlider/DetailsPageSlider";
 import Clients from "../Home/Clients";
 
-// console.log(foodTabs);
 
 const FoodCorner = () => {
   const [tabBtn, setTabBtn] = useState(0);
